@@ -1,5 +1,4 @@
 var express = require('express');
-var glob = require("glob");
 var fs = require('fs');
 var path = require('path');
 
