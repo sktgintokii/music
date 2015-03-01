@@ -24,7 +24,6 @@ app.get('/getList', function (req, res){
 	var data = {
 		playlist: getPlaylist("public/music")
 	}
-	console.log(data);
 
 	res.json(data);
 });
