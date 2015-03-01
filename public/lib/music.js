@@ -57,9 +57,8 @@ function shufflePlaylist(){
     var content = shuffle($("#playlist li"));
     console.log(content);
     $("#playlist").html(content);
-
-
 }
+
 
 
 function main(){
@@ -80,12 +79,19 @@ function main(){
     $('ol li').first().addClass('playing');
     audio.load(first);
 
+
+
     // Load in a track on click
     $('ol li').click(function(e) {
         e.preventDefault();
         $(this).addClass('playing').siblings().removeClass('playing');
         audio.load($('a', this).attr('data-src'));
         audio.play();
+        console.log(jQuery(this).find('a').html());
+
+        var name = jQuery(this).find('a').html();
+        var title = "Now playing: </br><em>" + name + "</em>";
+        $("#song-title").html(title);
     });
 
         
