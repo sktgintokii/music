@@ -89,8 +89,9 @@ function main(){
         audio.play();
         console.log(jQuery(this).find('a').html());
 
-        var name = jQuery(this).find('a').html();
-        var title = "Now playing: </br><em>" + name + "</em>";
+        var index = $(this).index();
+        var name = $(this).find('a').html();
+        var title = "Now playing: </br><em>" + "[" + (index+1) + "] " + name + "</em>";
         $("#song-title").html(title);
     });
 
