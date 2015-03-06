@@ -15,13 +15,20 @@ app.use(multer({
 
 
 function getPlaylist(filename) {
-	var playlist = fs.readdirSync(filename).map(function(child) {
+	var playlist = [];
+	var p = fs.readdirSync(filename).map(function(child) {
 
 		return {
 			name: path.basename(child),
 			path: 'music/' + child
 		};
 	});
+
+	for (var i = 0; i < p.length; i++){
+		if (p[i].name[0] !== "."){
+			playlist = playlist.concat(p[i]);
+		}
+	}
 
 	return playlist;
 }
