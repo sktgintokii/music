@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>audio.js</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=0.6" name="viewport">
+
+    <script src="/lib/jquery.js"></script>
+    <script src="/lib/audiojs/audio.js"></script>
+    <script src="/lib/music.js"></script>
+
+	    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+
+</head>
+<body>
+	<header>
+		<div class="container"> <a href="index.html"> Return to index </a></div>
+	</header>
+
+	<div class="container-fluid">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Upload Music
+			</div>
+			<div class="panel-body">
+				<form action="/upload" method="Post" enctype="multipart/form-data">
+					<label for="inputFile">File input</label>
+					<input type="file" name="file" id="inputFile" required multiple>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
